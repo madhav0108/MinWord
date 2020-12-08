@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MINWRD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="W04-8z-mQW">
+                                <rect key="frame" x="61" y="284" width="253" height="42"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RandomWord" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elu-YG-91g">
+                                        <rect key="frame" x="0.0" y="0.0" width="223.33333333333334" height="42"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0c-LK-GMr">
+                                        <rect key="frame" x="233.33333333333331" y="0.0" width="19.666666666666657" height="42"/>
+                                        <state key="normal" image="info.circle" catalog="system"/>
+                                        <connections>
+                                            <action selector="getRndWrdInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P7L-w1-oVg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="I0c-LK-GMr" firstAttribute="centerY" secondItem="W04-8z-mQW" secondAttribute="centerY" id="vFr-bz-SDP"/>
+                                    <constraint firstItem="elu-YG-91g" firstAttribute="centerY" secondItem="W04-8z-mQW" secondAttribute="centerY" id="veD-Th-XOD"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Courtsey of MIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqv-09-0zu">
+                                <rect key="frame" x="115.66666666666667" y="366" width="143.66666666666663" height="23.333333333333314"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-nD-CDP">
+                                <rect key="frame" x="100" y="429.33333333333331" width="175" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="New Random Word"/>
+                                <connections>
+                                    <action selector="getNewRndWrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R54-Go-oGx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hyz-8U-zvD">
+                                <rect key="frame" x="20" y="149.33333333333334" width="335" height="94.666666666666657"/>
+                                <string key="text">a raised area, often having a stepped or sloping floor, in a theater, church, or other public building to accommodate spectators, exhibits, etc.</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W04-8z-mQW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="Abn-aM-93Z"/>
+                            <constraint firstItem="0c6-nD-CDP" firstAttribute="top" secondItem="eqv-09-0zu" secondAttribute="bottom" constant="40" id="O1A-Hh-QXD"/>
+                            <constraint firstItem="Hyz-8U-zvD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QSY-d7-ZBe"/>
+                            <constraint firstItem="eqv-09-0zu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SdC-qO-ZLP"/>
+                            <constraint firstItem="W04-8z-mQW" firstAttribute="top" secondItem="Hyz-8U-zvD" secondAttribute="bottom" constant="40" id="Uwd-4G-J7t"/>
+                            <constraint firstItem="Hyz-8U-zvD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aLG-G6-3jj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hyz-8U-zvD" secondAttribute="trailing" constant="20" id="d4u-Ts-MLp"/>
+                            <constraint firstItem="0c6-nD-CDP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dUP-jW-8Wv"/>
+                            <constraint firstItem="eqv-09-0zu" firstAttribute="top" secondItem="W04-8z-mQW" secondAttribute="bottom" constant="40" id="j3O-df-ndA"/>
+                            <constraint firstItem="W04-8z-mQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jFE-MU-is5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newRndWrd" destination="0c6-nD-CDP" id="d2d-PD-14n"/>
+                        <outlet property="rndWrdDef" destination="Hyz-8U-zvD" id="WU3-TR-m4z"/>
+                        <outlet property="rndWrdInfo" destination="I0c-LK-GMr" id="yTf-9R-EIL"/>
+                        <outlet property="rndWrdLbl" destination="elu-YG-91g" id="ito-ql-n9Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="88.669950738916256"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
