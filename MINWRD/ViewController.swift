@@ -9,12 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var infoCount = 0
+    
     @IBOutlet weak var rndWrdLbl: UILabel!
     @IBOutlet weak var newRndWrd: UIButton!
     @IBOutlet weak var rndWrdInfo: UIButton!
     @IBOutlet weak var rndWrdDef: UILabel!
     
     @IBAction func getRndWrdInfo(_ sender: Any) {
+        
+        rndWrdDef.isHidden = false
+        
         let infoWrd = rndWrdLbl.text!
         let url = URL(string: "https://www.dictionary.com/browse/" + infoWrd)!
         
@@ -23,7 +28,7 @@ class ViewController: UIViewController {
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             data, response, error in
             
-            var def = ""
+            var refDef = ""
             
             if let error = error {
                 print(error)
@@ -34,10 +39,27 @@ class ViewController: UIViewController {
                     if let defExtra = dataString?.components(separatedBy: stringSeperator) {
                         print(defExtra)
                         if defExtra.count > 1 {
-                            stringSeperator = "See more.\">"
-                            let defCollection = defExtra[1].components(separatedBy: stringSeperator)
-                            if defCollection.count > 1 {
-                                def = defCollection[0]
+                            stringSeperator = "definition, "
+                            let defLilExtra = defExtra[1].components(separatedBy: stringSeperator)
+                            if defLilExtra.count > 1 {
+                                stringSeperator = "See more.\">"
+                                let defCollection = defLilExtra[1].components(separatedBy: stringSeperator)
+                                if defCollection.count > 1 {
+                                    stringSeperator = " "
+                                    let def = defCollection[0].components(separatedBy: stringSeperator)
+                                    if def.count > 18 {
+                                        for i in 0..<17 {
+                                            refDef.append(def[i])
+                                            refDef.append(" ")
+                                        }
+                                        refDef.append("...")
+                                    } else {
+                                        for i in 0..<def.count {
+                                            refDef.append(def[i])
+                                            refDef.append(" ")
+                                        }
+                                    }
+                                }
                                 //print(def)
                             }
                         }
@@ -45,12 +67,17 @@ class ViewController: UIViewController {
                 }
             }
             DispatchQueue.main.sync {
-                self.rndWrdDef.text = def
+                self.rndWrdDef.text = refDef
             }
         }
         task.resume()
     }
+    
     @IBAction func getNewRndWrd(_ sender: Any) {
+        
+        rndWrdInfo.isHidden = false
+        rndWrdDef.isHidden = true
+        
         let url = URL(string: "https://www.mit.edu/~ecprice/wordlist.10000")!
         
         let request = NSMutableURLRequest(url: url)
@@ -89,9 +116,13 @@ class ViewController: UIViewController {
         }
         task.resume()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if infoCount == 0 {
+            rndWrdInfo.isHidden = true
+            rndWrdDef.isHidden = true
+        }
     }
     
     // Do any additional setup after loading the view.
