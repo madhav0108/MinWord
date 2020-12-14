@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,86 +13,95 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MINWRD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W04-8z-mQW">
-                                <rect key="frame" x="119.66666666666669" y="179" width="136" height="42"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Yx0-DY-UxI">
+                                <rect key="frame" x="31" y="94" width="328" height="310.66666666666669"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5e-y9-Y0G" userLabel="Rnd Wrd Clue">
-                                        <rect key="frame" x="0.0" y="0.0" width="19" height="42"/>
-                                        <state key="normal" image="lightbulb" catalog="system"/>
-                                        <connections>
-                                            <action selector="getRndWrdClue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BoL-Wt-gNt"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elu-YG-91g">
-                                        <rect key="frame" x="26.999999999999993" y="0.0" width="81.333333333333314" height="42"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="35"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="achievable, available, conceivable, desirable, feasible" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-oT-MNu" userLabel="Rnd Wrd Syn">
+                                        <rect key="frame" x="14.333333333333343" y="0.0" width="299.66666666666663" height="47.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0c-LK-GMr">
-                                        <rect key="frame" x="116.33333333333333" y="0.0" width="19.666666666666671" height="42"/>
-                                        <state key="normal" image="info.circle" catalog="system"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W04-8z-mQW">
+                                        <rect key="frame" x="36.333333333333329" y="65.333333333333343" width="255.66666666666669" height="35"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5e-y9-Y0G" userLabel="Rnd Wrd Clue">
+                                                <rect key="frame" x="0.0" y="0.0" width="19" height="35"/>
+                                                <state key="normal" image="lightbulb" catalog="system"/>
+                                                <connections>
+                                                    <action selector="getRndWrdClue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BoL-Wt-gNt"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="po_s_b_e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elu-YG-91g">
+                                                <rect key="frame" x="27" y="0.0" width="201" height="35"/>
+                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0c-LK-GMr">
+                                                <rect key="frame" x="236" y="0.0" width="19.666666666666657" height="35"/>
+                                                <state key="normal" image="info.circle" catalog="system"/>
+                                                <connections>
+                                                    <action selector="getRndWrdInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P7L-w1-oVg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="elu-YG-91g" firstAttribute="centerY" secondItem="W04-8z-mQW" secondAttribute="centerY" id="veD-Th-XOD"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="that may or can be, exist, happen, be done, be used, etc.: a disease with no possible cure..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyz-8U-zvD">
+                                        <rect key="frame" x="0.33333333333334281" y="118.33333333333334" width="327.66666666666663" height="71"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="possible" borderStyle="roundedRect" placeholder="what's your guess?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-X3-0dM">
+                                        <rect key="frame" x="0.0" y="207.33333333333331" width="328" height="49.333333333333314"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-nD-CDP">
+                                        <rect key="frame" x="76.666666666666686" y="274.66666666666669" width="175" height="36"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <state key="normal" title="New Random Word"/>
                                         <connections>
-                                            <action selector="getRndWrdInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P7L-w1-oVg"/>
+                                            <action selector="getNewRndWrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R54-Go-oGx"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="elu-YG-91g" firstAttribute="centerY" secondItem="W04-8z-mQW" secondAttribute="centerY" id="veD-Th-XOD"/>
+                                    <constraint firstItem="4m2-X3-0dM" firstAttribute="width" secondItem="Yx0-DY-UxI" secondAttribute="width" id="W2C-3h-9my"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-oT-MNu" userLabel="Rnd Wrd Syn">
-                                <rect key="frame" x="36" y="98" width="303" height="0.0"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Hyz-8U-zvD">
-                                <rect key="frame" x="20" y="241" width="335" height="0.0"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="what's your guess?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-X3-0dM">
-                                <rect key="frame" x="37.666666666666657" y="349" width="300" height="48"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23b-u1-f0T">
+                                <rect key="frame" x="329.66666666666669" y="766.66666666666663" width="44.333333333333314" height="43"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="eyw-Ld-InH"/>
+                                    <constraint firstAttribute="width" secondItem="23b-u1-f0T" secondAttribute="height" multiplier="1:1" id="bSS-3P-uk1"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="32"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-nD-CDP">
-                                <rect key="frame" x="100" y="417" width="175" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="New Random Word"/>
+                                <state key="normal" backgroundImage="questionmark.circle.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="getNewRndWrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R54-Go-oGx"/>
+                                    <action selector="guessChecking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMh-J2-sQZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4m2-X3-0dM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Zd-As-1rr"/>
-                            <constraint firstItem="W04-8z-mQW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="8T4-h7-UGB"/>
-                            <constraint firstItem="5qQ-oT-MNu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="ByV-hk-NAX"/>
-                            <constraint firstItem="0c6-nD-CDP" firstAttribute="top" secondItem="4m2-X3-0dM" secondAttribute="bottom" constant="20" id="EtU-2N-U5u"/>
-                            <constraint firstItem="Hyz-8U-zvD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QSY-d7-ZBe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5qQ-oT-MNu" secondAttribute="trailing" constant="20" id="V7r-Vf-Ltg"/>
-                            <constraint firstItem="Hyz-8U-zvD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aLG-G6-3jj"/>
-                            <constraint firstItem="5qQ-oT-MNu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aVH-Zd-TM9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hyz-8U-zvD" secondAttribute="trailing" constant="20" id="d4u-Ts-MLp"/>
-                            <constraint firstItem="0c6-nD-CDP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dUP-jW-8Wv"/>
-                            <constraint firstItem="5qQ-oT-MNu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="gGh-d5-mBG"/>
-                            <constraint firstItem="4m2-X3-0dM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="305" id="gO9-hT-haS"/>
-                            <constraint firstItem="W04-8z-mQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jFE-MU-is5"/>
-                            <constraint firstItem="Hyz-8U-zvD" firstAttribute="top" secondItem="W04-8z-mQW" secondAttribute="bottom" constant="20" id="jjB-WN-a4h"/>
+                            <constraint firstItem="23b-u1-f0T" firstAttribute="height" secondItem="4m2-X3-0dM" secondAttribute="height" multiplier="0.9" id="3KI-u0-0IS"/>
+                            <constraint firstItem="Yx0-DY-UxI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Fta-UN-com"/>
+                            <constraint firstItem="Yx0-DY-UxI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OLt-wh-vpr"/>
+                            <constraint firstItem="Yx0-DY-UxI" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="180:420" id="Tpb-Pd-Sqs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="23b-u1-f0T" secondAttribute="bottom" id="q11-T7-uoQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="23b-u1-f0T" secondAttribute="trailing" id="vL7-Vt-eRJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="guessCheckBtn" destination="23b-u1-f0T" id="sJt-l4-iRm"/>
+                        <outlet property="guessTextField" destination="4m2-X3-0dM" id="1im-gy-Ipc"/>
                         <outlet property="newRndWrd" destination="0c6-nD-CDP" id="d2d-PD-14n"/>
                         <outlet property="rndWrdClue" destination="m5e-y9-Y0G" id="28i-lp-8qM"/>
                         <outlet property="rndWrdDef" destination="Hyz-8U-zvD" id="WU3-TR-m4z"/>
@@ -109,6 +118,7 @@
     <resources>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
+        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

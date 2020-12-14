@@ -14,6 +14,7 @@
 		A95ED506257F4A9A00D902EC /* MINWRD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A95ED504257F4A9A00D902EC /* MINWRD.xcdatamodeld */; };
 		A95ED508257F4A9C00D902EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A95ED507257F4A9C00D902EC /* Assets.xcassets */; };
 		A95ED50B257F4A9C00D902EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A95ED509257F4A9C00D902EC /* LaunchScreen.storyboard */; };
+		A95ED5252584C3F200D902EC /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95ED5242584C3F200D902EC /* UIViewControllerExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		A95ED507257F4A9C00D902EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A95ED50A257F4A9C00D902EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A95ED50C257F4A9C00D902EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A95ED5242584C3F200D902EC /* UIViewControllerExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExt.swift; path = ../../MINRND/MINRND/UIViewControllerExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		A95ED4FA257F4A9A00D902EC /* MINWRD */ = {
 			isa = PBXGroup;
 			children = (
+				A95ED5242584C3F200D902EC /* UIViewControllerExt.swift */,
 				A95ED4FB257F4A9A00D902EC /* AppDelegate.swift */,
 				A95ED4FD257F4A9A00D902EC /* SceneDelegate.swift */,
 				A95ED4FF257F4A9A00D902EC /* ViewController.swift */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95ED5252584C3F200D902EC /* UIViewControllerExt.swift in Sources */,
 				A95ED506257F4A9A00D902EC /* MINWRD.xcdatamodeld in Sources */,
 				A95ED500257F4A9A00D902EC /* ViewController.swift in Sources */,
 				A95ED4FC257F4A9A00D902EC /* AppDelegate.swift in Sources */,
@@ -288,7 +292,7 @@
 		A95ED510257F4A9C00D902EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BV27BA45C;
@@ -307,7 +311,7 @@
 		A95ED511257F4A9C00D902EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BV27BA45C;
