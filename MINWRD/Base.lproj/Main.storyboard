@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,97 +18,127 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Yx0-DY-UxI">
-                                <rect key="frame" x="31" y="94" width="328" height="310.66666666666669"/>
+                                <rect key="frame" x="12.666666666666657" y="89.000000000000028" width="364.66666666666674" height="356.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="achievable, available, conceivable, desirable, feasible" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qQ-oT-MNu" userLabel="Rnd Wrd Syn">
-                                        <rect key="frame" x="14.333333333333343" y="0.0" width="299.66666666666663" height="47.333333333333336"/>
+                                        <rect key="frame" x="32.666666666666657" y="0.0" width="299.66666666666674" height="56.666666666666664"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W04-8z-mQW">
-                                        <rect key="frame" x="36.333333333333329" y="65.333333333333343" width="255.66666666666669" height="35"/>
+                                        <rect key="frame" x="78.999999999999986" y="74.666666666666657" width="206.66666666666663" height="42"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5e-y9-Y0G" userLabel="Rnd Wrd Clue">
-                                                <rect key="frame" x="0.0" y="0.0" width="19" height="35"/>
-                                                <state key="normal" image="lightbulb" catalog="system"/>
-                                                <connections>
-                                                    <action selector="getRndWrdClue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BoL-Wt-gNt"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="po_s_b_e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elu-YG-91g">
-                                                <rect key="frame" x="27" y="0.0" width="201" height="35"/>
-                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="35"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="po_s_b_e" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elu-YG-91g">
+                                                <rect key="frame" x="0.0" y="0.0" width="206.66666666666666" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="42" id="CgM-tb-dxc"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="36"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0c-LK-GMr">
-                                                <rect key="frame" x="236" y="0.0" width="19.666666666666657" height="35"/>
-                                                <state key="normal" image="info.circle" catalog="system"/>
-                                                <connections>
-                                                    <action selector="getRndWrdInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P7L-w1-oVg"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="elu-YG-91g" firstAttribute="centerY" secondItem="W04-8z-mQW" secondAttribute="centerY" id="veD-Th-XOD"/>
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="that may or can be, exist, happen, be done, be used, etc.: a disease with no possible cure..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyz-8U-zvD">
-                                        <rect key="frame" x="0.33333333333334281" y="118.33333333333334" width="327.66666666666663" height="71"/>
+                                        <rect key="frame" x="15.333333333333343" y="134.66666666666666" width="334.33333333333326" height="85.333333333333343"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="possible" borderStyle="roundedRect" placeholder="what's your guess?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-X3-0dM">
-                                        <rect key="frame" x="0.0" y="207.33333333333331" width="328" height="49.333333333333314"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="34"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <rect key="frame" x="27.333333333333343" y="237.99999999999997" width="310" height="51.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-nD-CDP">
-                                        <rect key="frame" x="76.666666666666686" y="274.66666666666669" width="175" height="36"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                        <state key="normal" title="New Random Word"/>
-                                        <connections>
-                                            <action selector="getNewRndWrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R54-Go-oGx"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-GW-LjH">
+                                        <rect key="frame" x="32.333333333333343" y="307.66666666666669" width="300" height="49"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5e-y9-Y0G" userLabel="Rnd Wrd Clue">
+                                                <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="m5e-y9-Y0G" secondAttribute="height" multiplier="1:1" id="gmw-mD-7Ph"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="lightbulb" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="getRndWrdClue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g9X-Ic-Cz9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-nD-CDP">
+                                                <rect key="frame" x="57" y="0.0" width="186" height="49"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
+                                                <state key="normal" title="submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="submitBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U9H-9N-xyU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0c-LK-GMr">
+                                                <rect key="frame" x="251" y="0.0" width="49" height="49"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="I0c-LK-GMr" secondAttribute="height" multiplier="1:1" id="fvR-d4-gla"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="info.circle" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="getRndWrdInfo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P7L-w1-oVg"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="m5e-y9-Y0G" firstAttribute="height" secondItem="0c6-nD-CDP" secondAttribute="height" id="L07-k9-XHk"/>
+                                            <constraint firstItem="I0c-LK-GMr" firstAttribute="height" secondItem="0c6-nD-CDP" secondAttribute="height" id="jua-mS-iY2"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="4m2-X3-0dM" firstAttribute="width" secondItem="Yx0-DY-UxI" secondAttribute="width" id="W2C-3h-9my"/>
+                                    <constraint firstItem="Hyz-8U-zvD" firstAttribute="height" secondItem="W04-8z-mQW" secondAttribute="height" multiplier="2.02857" id="6fO-bI-RLp"/>
+                                    <constraint firstItem="4m2-X3-0dM" firstAttribute="width" secondItem="Yx0-DY-UxI" secondAttribute="width" multiplier="0.85" id="W2C-3h-9my"/>
+                                    <constraint firstItem="0c6-nD-CDP" firstAttribute="width" secondItem="4m2-X3-0dM" secondAttribute="width" multiplier="0.6" id="h1v-uQ-iKW"/>
+                                    <constraint firstItem="5qQ-oT-MNu" firstAttribute="height" secondItem="W04-8z-mQW" secondAttribute="height" multiplier="1.35238" id="jsU-7T-oY2"/>
+                                    <constraint firstItem="0c6-nD-CDP" firstAttribute="height" secondItem="4m2-X3-0dM" secondAttribute="height" multiplier="0.95" id="rKo-G6-MI9"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23b-u1-f0T">
-                                <rect key="frame" x="329.66666666666669" y="766.66666666666663" width="44.333333333333314" height="43"/>
+                                <rect key="frame" x="347.33333333333331" y="783.33333333333337" width="26.666666666666686" height="26.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="23b-u1-f0T" secondAttribute="height" multiplier="1:1" id="bSS-3P-uk1"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="questionmark.circle.fill" catalog="system"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="r.square.on.square" catalog="system" symbolScale="large"/>
+                                </state>
                                 <connections>
-                                    <action selector="guessChecking:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tMh-J2-sQZ"/>
+                                    <action selector="getNewRndWrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ce3-vL-NJX"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="23b-u1-f0T" firstAttribute="height" secondItem="4m2-X3-0dM" secondAttribute="height" multiplier="0.9" id="3KI-u0-0IS"/>
-                            <constraint firstItem="Yx0-DY-UxI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Fta-UN-com"/>
+                            <constraint firstItem="Yx0-DY-UxI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="Fta-UN-com"/>
                             <constraint firstItem="Yx0-DY-UxI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OLt-wh-vpr"/>
-                            <constraint firstItem="Yx0-DY-UxI" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="180:420" id="Tpb-Pd-Sqs"/>
+                            <constraint firstItem="Yx0-DY-UxI" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="200:420" id="Tpb-Pd-Sqs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="23b-u1-f0T" secondAttribute="bottom" id="q11-T7-uoQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="23b-u1-f0T" secondAttribute="trailing" id="vL7-Vt-eRJ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="guessCheckBtn" destination="23b-u1-f0T" id="sJt-l4-iRm"/>
                         <outlet property="guessTextField" destination="4m2-X3-0dM" id="1im-gy-Ipc"/>
-                        <outlet property="newRndWrd" destination="0c6-nD-CDP" id="d2d-PD-14n"/>
+                        <outlet property="newRndWord" destination="23b-u1-f0T" id="sJt-l4-iRm"/>
                         <outlet property="rndWrdClue" destination="m5e-y9-Y0G" id="28i-lp-8qM"/>
                         <outlet property="rndWrdDef" destination="Hyz-8U-zvD" id="WU3-TR-m4z"/>
                         <outlet property="rndWrdInfo" destination="I0c-LK-GMr" id="yTf-9R-EIL"/>
                         <outlet property="rndWrdLbl" destination="elu-YG-91g" id="ito-ql-n9Z"/>
                         <outlet property="rndWrdSyn" destination="5qQ-oT-MNu" id="f1n-t8-ih1"/>
+                        <outlet property="submitBtn" destination="0c6-nD-CDP" id="d2d-PD-14n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -118,7 +149,7 @@
     <resources>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
-        <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="r.square.on.square" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

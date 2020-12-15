@@ -12,26 +12,28 @@ class ViewController: UIViewController {
     var wrdHold = ""
     
     @IBOutlet weak var rndWrdLbl: UILabel!
-    @IBOutlet weak var newRndWrd: UIButton!
+    @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var rndWrdInfo: UIButton!
     @IBOutlet weak var rndWrdDef: UILabel!
     @IBOutlet weak var rndWrdClue: UIButton!
     @IBOutlet weak var rndWrdSyn: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
-    @IBOutlet weak var guessCheckBtn: UIButton!
+    @IBOutlet weak var newRndWord: UIButton!
     
-    @IBAction func guessChecking(_ sender: Any) {
+    @IBAction func submitBtnPressed(_ sender: Any) {
         if guessTextField.text == wrdHold {
             guessTextField.layer.borderWidth = 2.0
             guessTextField.layer.borderColor = #colorLiteral(red: 0.3803921569, green: 0.768627451, blue: 0.3294117647, alpha: 1)
+            getNewRndWrd(self)
         } else {
             guessTextField.layer.borderWidth = 2.0
             guessTextField.layer.borderColor = #colorLiteral(red: 0.9294117647, green: 0.4156862745, blue: 0.3725490196, alpha: 1)
         }
     }
+    
     @IBAction func getRndWrdInfo(_ sender: Any) {
         //rndWrdSyn.isHidden = true
-        rndWrdDef.isHidden = false
+        //rndWrdDef.isHidden = false
         let image = UIImage(systemName: "info.circle.fill")
         rndWrdInfo.setImage(image, for: .normal)
         
@@ -95,7 +97,7 @@ class ViewController: UIViewController {
     
     @IBAction func getRndWrdClue(_ sender: Any) {
         //rndWrdDef.isHidden = true
-        rndWrdSyn.isHidden = false
+        //rndWrdSyn.isHidden = false
         let image = UIImage(systemName: "lightbulb.fill")
         rndWrdClue.setImage(image, for: .normal)
         
@@ -159,8 +161,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func getNewRndWrd(_ sender: Any) {
-        rndWrdDef.isHidden = true
-        rndWrdSyn.isHidden = true
+        rndWrdDef.text = ""
+        rndWrdSyn.text = ""
         guessTextField.layer.cornerRadius = 5.0
         guessTextField.layer.borderWidth = 0.0
         guessTextField.text = ""
@@ -179,7 +181,7 @@ class ViewController: UIViewController {
             var wordWithB = ""
             var word = ""
             var wordB = ""
-            var words5 = [String]()
+            var words512 = [String]()
             
             if let error = error {
                 print("error: ", error)
@@ -190,17 +192,17 @@ class ViewController: UIViewController {
                     if let words = dataString?.components(separatedBy: stringSeperator) {
                         //print(words)
                         for wrd in words {
-                            if wrd.count >= 5 {
-                                words5.append(wrd)
+                            if wrd.count >= 5 && wrd.count <= 12 {
+                                words512.append(wrd)
                             }
                         }
                         //print(words.count)
                         //print(words5.count)
-                        let n = words5.count
+                        let n = words512.count
                         let numbs = 0..<n
                         let a = Int.random(in: numbs)
-                        word = words5[a]
-                        wordB = words5[a]
+                        word = words512[a]
+                        wordB = words512[a]
                         //print("wordB: ",wordB)
                         
                         let wrdLen = wordB.count
@@ -234,10 +236,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        rndWrdLbl.font = UIFont.monospacedSystemFont(ofSize: 38, weight: .light)
+        
+        submitBtn.layer.cornerRadius = 5.0
+        
         guessTextField.layer.cornerRadius = 5.0
         guessTextField.text = ""
         guessTextField.rightViewMode = UITextField.ViewMode.always
-        guessTextField.rightView = guessCheckBtn
+        guessTextField.rightView = newRndWord
+        
         //rndWrdDef.isHidden = true
         //rndWrdSyn.isHidden = true
         getNewRndWrd(self)
