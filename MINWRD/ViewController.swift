@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var wrdHold = ""
+    var guessCount = 0
     
     @IBOutlet weak var rndWrdLbl: UILabel!
     @IBOutlet weak var submitBtn: UIButton!
@@ -21,13 +22,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var newRndWord: UIButton!
     
     @IBAction func submitBtnPressed(_ sender: Any) {
-        if guessTextField.text == wrdHold {
-            guessTextField.layer.borderWidth = 2.0
-            guessTextField.layer.borderColor = #colorLiteral(red: 0.3803921569, green: 0.768627451, blue: 0.3294117647, alpha: 1)
+        if guessCount == 0 {
+            if guessTextField.text == wrdHold {
+                guessCount = 1
+                guessTextField.layer.borderWidth = 2.0
+                guessTextField.layer.borderColor = #colorLiteral(red: 0.3803921569, green: 0.768627451, blue: 0.3294117647, alpha: 1)
+                submitBtn.setTitle("next", for: .normal)
+                
+                //guessTextField.rightView = nil
+                //newRndWord.isHidden = true
+            } else {
+                guessCount = 0
+                guessTextField.layer.borderWidth = 2.0
+                guessTextField.layer.borderColor = #colorLiteral(red: 0.9294117647, green: 0.4156862745, blue: 0.3725490196, alpha: 1)
+            }
+            return
+        }
+        if guessCount == 1 {
+            submitBtn.setTitle("submit", for: .normal)
+            
             getNewRndWrd(self)
-        } else {
-            guessTextField.layer.borderWidth = 2.0
-            guessTextField.layer.borderColor = #colorLiteral(red: 0.9294117647, green: 0.4156862745, blue: 0.3725490196, alpha: 1)
         }
     }
     
@@ -163,6 +177,11 @@ class ViewController: UIViewController {
     @IBAction func getNewRndWrd(_ sender: Any) {
         rndWrdDef.text = ""
         rndWrdSyn.text = ""
+        
+        //guessTextField.rightViewMode = UITextField.ViewMode.always
+        //guessTextField.rightView = newRndWord
+        guessCount = 0
+        
         guessTextField.layer.cornerRadius = 5.0
         guessTextField.layer.borderWidth = 0.0
         guessTextField.text = ""
@@ -202,8 +221,9 @@ class ViewController: UIViewController {
                         let numbs = 0..<n
                         let a = Int.random(in: numbs)
                         word = words512[a]
+                        //word = "repository"
                         wordB = words512[a]
-                        //print("wordB: ",wordB)
+                        print("wordB: ",wordB)
                         
                         let wrdLen = wordB.count
                         //print("wrdLen: ",wrdLen)
@@ -223,6 +243,7 @@ class ViewController: UIViewController {
                             }
                         }
                         wordWithB = wordB
+                        //wordWithB = "_ep_si__r_"
                     }
                 }
             }
