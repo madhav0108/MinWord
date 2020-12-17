@@ -20,34 +20,46 @@ class ViewController: UIViewController {
     @IBOutlet weak var rndWrdSyn: UILabel!
     @IBOutlet weak var guessTextField: UITextField!
     @IBOutlet weak var newRndWord: UIButton!
+    @IBOutlet weak var answerBtn: UIButton!
+    
+    @IBAction func showAnswer(_ sender: Any) {
+        
+        guessTextField.text = wrdHold
+        guessTextField.layer.borderWidth = 2.0
+        guessTextField.layer.borderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        submitBtn.setTitle("next", for: .normal)
+        guessCount = 1
+        
+    }
     
     @IBAction func submitBtnPressed(_ sender: Any) {
+        
+        //guessTextField displays user-answer if correct
         if guessCount == 0 {
             if guessTextField.text == wrdHold {
                 guessCount = 1
                 guessTextField.layer.borderWidth = 2.0
-                guessTextField.layer.borderColor = #colorLiteral(red: 0.3803921569, green: 0.768627451, blue: 0.3294117647, alpha: 1)
+                guessTextField.layer.borderColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
                 submitBtn.setTitle("next", for: .normal)
-                
-                //guessTextField.rightView = nil
-                //newRndWord.isHidden = true
             } else {
                 guessCount = 0
                 guessTextField.layer.borderWidth = 2.0
-                guessTextField.layer.borderColor = #colorLiteral(red: 0.9294117647, green: 0.4156862745, blue: 0.3725490196, alpha: 1)
+                guessTextField.layer.borderColor = #colorLiteral(red: 1, green: 0.1491314173, blue: 0, alpha: 1)
             }
             return
         }
         if guessCount == 1 {
             submitBtn.setTitle("submit", for: .normal)
-            
+            //getNewRandomWord and then set guessCount 0
             getNewRndWrd(self)
         }
+        
     }
     
     @IBAction func getRndWrdInfo(_ sender: Any) {
-        //rndWrdSyn.isHidden = true
+        
         //rndWrdDef.isHidden = false
+        //rndWrdSyn.isHidden = true
         let image = UIImage(systemName: "info.circle.fill")
         rndWrdInfo.setImage(image, for: .normal)
         
@@ -107,9 +119,11 @@ class ViewController: UIViewController {
                 self.rndWrdDef.text = refDef
             }
         }.resume()
+        
     }
     
     @IBAction func getRndWrdClue(_ sender: Any) {
+        
         //rndWrdDef.isHidden = true
         //rndWrdSyn.isHidden = false
         let image = UIImage(systemName: "lightbulb.fill")
@@ -171,15 +185,15 @@ class ViewController: UIViewController {
                 self.rndWrdSyn.text = synCol
             }
         }.resume()
+        
     }
     
     
     @IBAction func getNewRndWrd(_ sender: Any) {
+        
         rndWrdDef.text = ""
         rndWrdSyn.text = ""
         
-        //guessTextField.rightViewMode = UITextField.ViewMode.always
-        //guessTextField.rightView = newRndWord
         guessCount = 0
         
         guessTextField.layer.cornerRadius = 5.0
@@ -221,9 +235,7 @@ class ViewController: UIViewController {
                         let numbs = 0..<n
                         let a = Int.random(in: numbs)
                         word = words512[a]
-                        //word = "repository"
                         wordB = words512[a]
-                        print("wordB: ",wordB)
                         
                         let wrdLen = wordB.count
                         //print("wrdLen: ",wrdLen)
@@ -243,7 +255,6 @@ class ViewController: UIViewController {
                             }
                         }
                         wordWithB = wordB
-                        //wordWithB = "_ep_si__r_"
                     }
                 }
             }
@@ -253,6 +264,7 @@ class ViewController: UIViewController {
                 self.wrdHold = word
             }
         }.resume()
+        
     }
     
     override func viewDidLoad() {
@@ -265,9 +277,15 @@ class ViewController: UIViewController {
         guessTextField.text = ""
         guessTextField.rightViewMode = UITextField.ViewMode.always
         guessTextField.rightView = newRndWord
+        guessTextField.leftViewMode = UITextField.ViewMode.always
+        guessTextField.leftView = answerBtn
         
         //rndWrdDef.isHidden = true
         //rndWrdSyn.isHidden = true
+        
+        guessCount = 0
+        //newRWCount = 0
+        
         getNewRndWrd(self)
         
         self.hideKeyboardWhenTappedAround()

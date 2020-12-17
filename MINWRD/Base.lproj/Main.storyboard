@@ -49,7 +49,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="possible" borderStyle="roundedRect" placeholder="what's your guess?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-X3-0dM">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="what's your guess?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-X3-0dM">
                                         <rect key="frame" x="27.333333333333343" y="237.99999999999997" width="310" height="51.666666666666657"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
@@ -119,18 +119,31 @@
                                     <action selector="getNewRndWrd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ce3-vL-NJX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgX-f2-RAF">
+                                <rect key="frame" x="312.66666666666669" y="785.66666666666663" width="26.666666666666686" height="22"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="a.square" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rkk-sl-EWj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="23b-u1-f0T" firstAttribute="leading" secondItem="lgX-f2-RAF" secondAttribute="trailing" constant="8" id="2L1-aP-zE8"/>
                             <constraint firstItem="Yx0-DY-UxI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="Fta-UN-com"/>
+                            <constraint firstItem="lgX-f2-RAF" firstAttribute="width" secondItem="23b-u1-f0T" secondAttribute="height" multiplier="1:1" id="INO-ZF-oAf"/>
                             <constraint firstItem="Yx0-DY-UxI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OLt-wh-vpr"/>
                             <constraint firstItem="Yx0-DY-UxI" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="200:420" id="Tpb-Pd-Sqs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="23b-u1-f0T" secondAttribute="bottom" id="q11-T7-uoQ"/>
+                            <constraint firstItem="lgX-f2-RAF" firstAttribute="centerY" secondItem="23b-u1-f0T" secondAttribute="centerY" id="tz1-0t-eU5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="23b-u1-f0T" secondAttribute="trailing" id="vL7-Vt-eRJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="answerBtn" destination="lgX-f2-RAF" id="qUS-zp-q0a"/>
                         <outlet property="guessTextField" destination="4m2-X3-0dM" id="1im-gy-Ipc"/>
                         <outlet property="newRndWord" destination="23b-u1-f0T" id="sJt-l4-iRm"/>
                         <outlet property="rndWrdClue" destination="m5e-y9-Y0G" id="28i-lp-8qM"/>
@@ -147,6 +160,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="a.square" catalog="system" width="128" height="114"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
         <image name="r.square.on.square" catalog="system" width="128" height="113"/>
