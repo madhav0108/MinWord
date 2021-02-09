@@ -28,6 +28,8 @@ class ViewController: UIViewController {
         guessTextField.layer.borderWidth = 2.0
         guessTextField.layer.borderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         submitBtn.setTitle("next", for: .normal)
+        submitBtn.layer.borderWidth = 2.0
+        submitBtn.layer.borderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         guessCount = 1
         
     }

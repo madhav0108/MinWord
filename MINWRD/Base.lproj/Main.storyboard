@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -55,7 +55,7 @@
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="name"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hRK-GW-LjH">
-                                        <rect key="frame" x="32.333333333333343" y="307.66666666666669" width="300" height="49"/>
+                                        <rect key="frame" x="47.666666666666657" y="307.66666666666669" width="269.33333333333337" height="49"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5e-y9-Y0G" userLabel="Rnd Wrd Clue">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
@@ -70,18 +70,15 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c6-nD-CDP">
-                                                <rect key="frame" x="57" y="0.0" width="186" height="49"/>
-                                                <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="56.999999999999986" y="0.0" width="155.33333333333331" height="49"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="30"/>
-                                                <state key="normal" title="submit">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
+                                                <state key="normal" title="submit"/>
                                                 <connections>
                                                     <action selector="submitBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U9H-9N-xyU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I0c-LK-GMr">
-                                                <rect key="frame" x="251" y="0.0" width="49" height="49"/>
+                                                <rect key="frame" x="220.33333333333334" y="0.0" width="49.000000000000028" height="49"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="I0c-LK-GMr" secondAttribute="height" multiplier="1:1" id="fvR-d4-gla"/>
                                                 </constraints>
@@ -102,7 +99,7 @@
                                 <constraints>
                                     <constraint firstItem="Hyz-8U-zvD" firstAttribute="height" secondItem="W04-8z-mQW" secondAttribute="height" multiplier="2.02857" id="6fO-bI-RLp"/>
                                     <constraint firstItem="4m2-X3-0dM" firstAttribute="width" secondItem="Yx0-DY-UxI" secondAttribute="width" multiplier="0.85" id="W2C-3h-9my"/>
-                                    <constraint firstItem="0c6-nD-CDP" firstAttribute="width" secondItem="4m2-X3-0dM" secondAttribute="width" multiplier="0.6" id="h1v-uQ-iKW"/>
+                                    <constraint firstItem="0c6-nD-CDP" firstAttribute="width" secondItem="4m2-X3-0dM" secondAttribute="width" multiplier="0.5" id="h1v-uQ-iKW"/>
                                     <constraint firstItem="5qQ-oT-MNu" firstAttribute="height" secondItem="W04-8z-mQW" secondAttribute="height" multiplier="1.35238" id="jsU-7T-oY2"/>
                                     <constraint firstItem="0c6-nD-CDP" firstAttribute="height" secondItem="4m2-X3-0dM" secondAttribute="height" multiplier="0.95" id="rKo-G6-MI9"/>
                                 </constraints>
